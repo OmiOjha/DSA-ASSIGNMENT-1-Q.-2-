@@ -9,8 +9,12 @@ struct Book {
 };
 
 // Function to input details of books
-void inputBookDetails(struct Book* b, int count) {
+
+void inputBookDetails(struct Book* b, int count) 
+{
+    
     for (int i = 0; i < count; i++) {
+        
         printf("Enter details for Book %d:\n", i + 1);
 
         printf("Title: ");
