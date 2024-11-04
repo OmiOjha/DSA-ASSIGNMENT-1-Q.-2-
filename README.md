@@ -10,8 +10,7 @@ struct Book {
 
 // Function to input details of books
 
-void inputBookDetails(struct Book* b, int count) 
-{
+void inputBookDetails(struct Book* b, int count) {
     
     for (int i = 0; i < count; i++) {
         
@@ -33,8 +32,11 @@ void inputBookDetails(struct Book* b, int count)
 }
 
 // Function to find the most expensive and cheapest book
+
 void findMostExpensiveAndCheapest(struct Book* b, int count, struct Book** mostExpensive, struct Book** cheapest) {
+    
     *mostExpensive = &b[0];
+    
     *cheapest = &b[0];
 
     for (int i = 1; i < count; i++) {
@@ -48,13 +50,16 @@ void findMostExpensiveAndCheapest(struct Book* b, int count, struct Book** mostE
 }
 
 // Function to display book details
+
 void displayBookDetails(struct Book* b) {
+    
     printf("Title: %s\n", b->title);
     printf("Author: %s\n", b->author);
     printf("Price: %.2f\n", b->price);
 }
 
 int main() {
+   
     int n = 3;
     struct Book books[n];
     struct Book* mostExpensive;
@@ -64,6 +69,7 @@ int main() {
     inputBookDetails(books, n);
 
     // Find the most expensive and cheapest books
+    
     findMostExpensiveAndCheapest(books, n, &mostExpensive, &cheapest);
 
     // Display the most expensive book
